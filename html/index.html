@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>WinDos Net Terminal</title>
+    <link rel="stylesheet" href="./main.css" />
+    <link rel="stylesheet" href="./css/darkmarket.css" />
+    <script src="./js/app.js" defer></script>
+    <script src="./js/darkmarket.js" defer></script>
+</head>
+<body>
+    <audio id="boot-audio" src="./assets/audio/windosStartup.ogg"></audio>
+    <audio id="dialup-audio" src="./assets/audio/dialup.mp3" preload="auto"></audio>
+
+    <main id="terminal" class="terminal hidden" aria-label="WinDos internet terminal">
+        <div class="screen-curve"></div>
+        <div class="crt-lines"></div>
+        <div class="crt-glare"></div>
+
+        <section id="boot" class="boot active">
+            <div class="boot-card">
+                <div class="boot-logo"><span class="boot-four-square"><i></i><i></i><i></i><i></i></span>WinDos <small>95</small></div>
+                <div class="boot-loader"><i></i></div>
+                <p id="boot-text">Loading WinDos 95...</p>
+            </div>
+        </section>
+
+        <section id="desktop" class="desktop">
+            <button class="desktop-icon" data-app="my-computer" style="--x: 24px; --y: 28px;">
+                <img class="desktop-art" src="./assets/icons/custom-mycomputer.png" alt="" /><em>My Computer</em>
+            </button>
+            <button class="desktop-icon" data-app="browser" style="--x: 24px; --y: 120px;">
+                <img class="desktop-art" src="./assets/icons/custom-explorer.png" alt="" /><em>Internet Explorer</em>
+            </button>
+            <span id="mail-badge" class="badge hidden" hidden>0</span>
+            <button class="desktop-icon" data-app="network" style="--x: 24px; --y: 212px;">
+                <img class="desktop-art" src="./assets/icons/custom-network.png" alt="" /><em>Network Neighborhood</em>
+            </button>
+            <button class="desktop-icon" data-app="control-panel" style="--x: 120px; --y: 28px;">
+                <img class="desktop-art" src="./assets/icons/custom-settings_controlpanel.png" alt="" /><em>Control Panel</em>
+            </button>
+            <button class="desktop-icon" data-app="recycle-bin" style="--x: 120px; --y: 120px;">
+                <img class="desktop-art" src="./assets/icons/custom-recycle.png" alt="" /><em>Recycle Bin</em>
+            </button>
+            <button id="police-mdt-icon" class="desktop-icon hidden" data-app="police-mdt" style="--x: 120px; --y: 212px;">
+                <img class="desktop-art" src="./assets/icons/custom-government_police.png" alt=""><em id="police-mdt-label">Police MDT</em>
+            </button>
+
+            <section id="control-panel" class="window control-panel-window" aria-label="Control Panel">
+                <header><span>Control Panel</span><div class="window-buttons"><button id="close-control-panel" title="Close">×</button></div></header>
+                <div class="control-panel-body">
+                    <p>Adjust your computer settings.</p>
+                    <div class="cp-group-label">System Settings</div>
+                    <div class="cp-items">
+                        <button id="open-administration" class="control-panel-entry"><img src="./assets/icons/custom-settings_controlpanel.png" alt=""><span><strong>Administration</strong><small>Server-wide appearance settings</small></span></button>
+                        <button id="open-admin-mode" class="control-panel-entry"><img src="./assets/icons/custom-settings_controlpanel.png" alt=""><span><strong>Admin Mode</strong><small>Moderation and DarkMarket access</small></span></button>
+                        <button id="open-mdt-settings" class="control-panel-entry"><img src="./assets/icons/custom-government_police.png" alt=""><span><strong>Police MDT</strong><small>Compatibility and visibility</small></span></button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="admin-settings" class="window admin-settings-window" aria-label="WinDos Administration">
+                <header><span>WinDos Administration</span><div class="window-buttons"><button id="close-admin-settings" title="Close">×</button></div></header>
+                <div class="admin-settings-content">
+                    <nav class="admin-tabs" aria-label="Administration settings">
+                        <button id="admin-tab-appearance" class="selected" type="button">Appearance</button><button id="admin-tab-internet" type="button">Internet</button><button id="admin-tab-mdt" type="button">Police MDT</button><button id="admin-tab-darkmarket" type="button">DarkMarket</button>
+                    </nav>
+                    <section id="admin-appearance-section">
+                    <div class="admin-settings-heading">Computer Appearance</div>
+                    <p>Choose the colour style used on every computer connected to this server.</p>
+                    <label for="admin-theme-preset">Colour scheme</label>
+                    <select id="admin-theme-preset"><option value="original">Original</option><option value="gradient">Gradient</option><option value="midnight">Midnight Blue</option></select>
+                    <div class="admin-theme-preview" id="admin-theme-preview"><div class="admin-theme-preview-title">WinDos 95</div><div class="admin-theme-preview-body">Example window and desktop colours</div></div>
+                    </section>
+                    <section id="admin-internet-section" hidden>
+                        <div class="admin-settings-heading">Internet Access</div>
+                        <label class="admin-mdt-option"><input type="checkbox" id="admin-disable-dialup"> Disable dial up connection needed for internet access</label>
+                    </section>
+                    <section id="admin-mdt-section" hidden>
+                        <div class="admin-settings-heading">Police MDT Compatibility</div>
+                        <p>Configure how Police MDT appears on public terminals.</p>
+                        <div class="mdt-supported"><strong>Supported MDT scripts</strong><div><img src="./assets/icons/custom-government_police.png" alt=""><span><b>ps-mdt</b><small>Supported integration</small></span></div></div>
+                        <label class="admin-mdt-option"><input type="checkbox" id="admin-police-mdt" checked> Show Police MDT on compatible computers</label>
+                        <p class="mdt-support-note">Using another MDT? Open a ticket in the Blixt Developments Discord to request compatibility.</p>
+                        <a id="mdt-discord-link" class="mdt-discord-link" href="https://discord.gg/TFE4a3D7m4" target="_blank" rel="noopener noreferrer">discord.gg/TFE4a3D7m4</a><div id="mdt-discord-feedback" role="status"></div>
+                    </section>
+                    <section id="admin-darkmarket-section" hidden>
+                        <div class="admin-settings-heading">Moderation &amp; DarkMarket</div>
+                        <label class="admin-mdt-option"><input type="checkbox" id="admin-mode-toggle"> Enable Admin Mode while browsing</label>
+                        <p>Reveal player identities and remove public posts. Private MOL email is excluded.</p>
+                        <label class="admin-mdt-option"><input type="checkbox" id="admin-dark-police"> Allow police jobs to access DarkMarket</label>
+                        <p>Blocked by default. Applies to Qbox and QB-Core police jobs.</p>
+                        <button type="button" id="admin-save-darkmarket">Save DarkMarket Settings</button>
+                    </section>
+                    <div id="admin-save-status" role="status"></div>
+                    <div class="admin-settings-actions"><button id="admin-reset-theme">Restore Original</button><button id="admin-cancel-theme">Cancel</button><button id="admin-apply-theme">Apply to Server</button></div>
+                </div>
+            </section>
+
+            <section id="admin-dialog" class="window admin-dialog" role="dialog" aria-modal="true" aria-label="WinDos Security">
+                <header><span id="admin-dialog-title">WinDos Security</span><div class="window-buttons"><button id="admin-dialog-close" title="Close">×</button></div></header>
+                <div class="admin-dialog-body"><span id="admin-dialog-icon" class="admin-warning">⚠</span><div><strong id="admin-dialog-heading">Access Denied</strong><p id="admin-dialog-message">Administrator privileges are required.</p></div></div>
+                <div class="admin-dialog-footer"><button id="admin-dialog-ok">OK</button></div>
+            </section>
+
+            <section id="main-window" class="window main-window show">
+                <header>
+                    <span id="window-title">Welcome</span>
+                    <div class="window-buttons"><button id="minimize-app" title="Minimise">_</button><button id="maximize-app" title="Maximise">□</button><button id="close-app" title="Close App">×</button></div>
+                </header>
+                <div id="window-body" class="window-body"></div>
+            </section>
+
+            <nav id="start-menu" class="start-menu" aria-label="Start menu" hidden>
+                <div class="start-menu-brand"><strong>WinDos</strong></div>
+                <div class="start-menu-items">
+                    <button data-start-app="my-computer"><img src="./assets/icons/custom-mycomputer.png" alt="">My Computer</button>
+                    <div class="start-submenu-wrap">
+                        <button id="start-programs" aria-expanded="false"><img src="./assets/icons/custom-explorer.png" alt="">Programs <span class="submenu-arrow">▶</span></button>
+                        <div id="programs-menu" class="programs-menu" hidden>
+                            <button data-start-app="browser">Internet Explorer</button>
+                            <button data-start-app="police-mdt" id="start-police-mdt" hidden>Police MDT</button>
+                        </div>
+                    </div>
+                    <button data-start-app="control-panel"><img src="./assets/icons/custom-settings_controlpanel.png" alt="">Settings / Control Panel</button>
+                    <button data-start-app="network"><img src="./assets/icons/custom-network.png" alt="">Network Neighborhood</button>
+                    <button data-start-app="recycle-bin"><img src="./assets/icons/custom-recycle.png" alt="">Recycle Bin</button>
+                    <div class="start-divider"></div>
+                    <button id="start-shutdown">Shut Down...</button>
+                </div>
+            </nav>
+            <footer class="taskbar">
+                <button id="start-button" class="start-button"><span></span>Start</button>
+                <button id="task-label" class="task-button active">My Terminal</button>
+                <div class="tray">
+                    <span class="tray-light"></span>
+                    <span id="session-email">No MOL</span>
+                    <span id="clock">12:01 AM</span>
+                </div>
+            </footer>
+        </section>
+    </main>
+</body>
+</html>

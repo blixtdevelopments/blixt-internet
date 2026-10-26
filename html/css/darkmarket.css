@@ -1,0 +1,84 @@
+/* DarkMarket: a 1995 private website, not a DOS terminal. */
+.webpage.darkmarket-site {background:#070a09!important;color:#c7d4c6!important;font:13px/1.4 'Times New Roman',Times,serif!important;padding:0!important}
+.darkmarket-site .site-footer{display:none}
+.dm-page{max-width:100%;min-height:100%;box-sizing:border-box;background:#070b0a;color:#c9d2c2;padding:0 17px 14px;font:13px/1.4 'Times New Roman',Times,serif}
+.webpage.darkmarket-site header.dm-masthead{display:block!important;position:static!important;min-height:0!important;height:auto!important;max-width:850px;box-sizing:border-box;margin:0 auto;padding:9px 0 0;background:#050605!important;text-align:center;border:0!important}
+.dm-logo-art{display:block;width:min(100%,695px);height:auto;max-height:122px;object-fit:contain;margin:0 auto;image-rendering:auto}
+.dm-subtitle{display:flex;justify-content:space-between;align-items:center;max-width:660px;margin:0 auto;padding:0 1px 5px;font:12px 'Times New Roman',Times,serif;color:#bdcaa7}
+.dm-subtitle span:first-child{font:bold italic 15px 'Times New Roman',Times,serif;color:#d1ded0}
+.dm-content{max-width:800px;margin:0 auto;padding:12px 8px 20px;min-height:160px}
+.dm-content h2{font:bold 18px 'Times New Roman',Times,serif;color:#aaf3b1;margin:14px 0 7px;padding:0;border:0!important;letter-spacing:0}
+.dm-content h3{font:bold 16px 'Times New Roman',Times,serif;color:#7ce1c6;margin:10px 0 6px}
+.dm-content p{margin:8px 0;color:#c9d2c2}
+.dm-content small{display:block;color:#a4b99e;font:12px 'Times New Roman',Times,serif}
+.dm-content hr{border:0;border-top:1px dotted #426951;margin:14px 0}
+.dm-foot{max-width:800px;margin:13px auto 0;text-align:center;font:11px 'Times New Roman',Times,serif;color:#859b86;padding:9px 0}
+.dm-nav{max-width:750px;margin:4px auto 0;padding:6px 1px 3px;border-top:1px solid #39794a;display:flex;justify-content:flex-start;flex-wrap:wrap;gap:5px 17px}
+.dm-nav button,.dm-userline button,.dm-link,.dm-breadcrumb button{cursor:pointer;border:0;background:transparent!important;box-shadow:none!important;padding:0;color:#89c5ff!important;text-decoration:underline;font:inherit;text-align:left}
+.dm-nav button{font:bold 14px 'Times New Roman',Times,serif}
+.dm-nav button:before{content:'[ ';color:#a2bf9e}
+.dm-nav button:after{content:' ]';color:#a2bf9e}
+.dm-nav button:hover,.dm-link:hover,.dm-userline button:hover,.dm-breadcrumb button:hover{color:#f3b1f5!important}
+.dm-userline{max-width:750px;margin:2px auto 0;padding:0 2px;color:#9db69a;font:12px 'Times New Roman',Times,serif}
+.dm-userline strong{color:#b1f7b5}.dm-userline button{margin-left:15px;font-size:12px}
+.dm-entry-note{border-top:1px solid #376d45;padding:7px 0 0;max-width:730px;margin:0 auto;font:12px 'Times New Roman',Times,serif;color:#bbc9b3}
+.dm-entry-note b{color:#9bdd9c;font-weight:bold}
+.dm-entry-note span{float:right;color:#99b2ac}
+.dm-login-layout{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.85fr);gap:52px;max-width:690px;margin:10px auto 0;padding:0 4px}
+.dm-auth-panel{max-width:320px}
+.dm-auth-panel h2{margin-top:0!important}
+.dm-register-panel{max-width:280px;padding-top:12px}
+.dm-register-panel h2{margin-top:0!important;color:#7ddaca!important}
+.dm-register-panel #dm-register-toggle{font:14px 'Times New Roman',Times,serif}
+.dm-register-panel form{margin-top:10px}
+.dm-login-help,.dm-register-note{font:11px 'Times New Roman',Times,serif!important;color:#99b3a2!important;line-height:1.45}
+.dm-page form label{display:block;margin:7px 0 7px;color:#cdd8c6;font:13px 'Times New Roman',Times,serif}
+.dm-page input,.dm-page select,.dm-page textarea{box-sizing:border-box;width:100%;max-width:100%;display:block;margin:3px 0 0;padding:4px 6px;color:#101010;background:#f0f1e9;border:2px inset #c0c0c0;border-radius:0;font:13px Arial,Helvetica,sans-serif;outline:none}
+.dm-page input:focus,.dm-page textarea:focus,.dm-page select:focus{outline:1px dotted #e4ddb3}
+.dm-page form button[type=submit],.dm-filter form button,.dm-actions button{border:2px outset #dedede!important;border-radius:0!important;background:#c0c0c0!important;color:#111!important;font:12px Arial,Helvetica,sans-serif;padding:3px 15px;cursor:pointer}
+.dm-page button:disabled{opacity:.55;cursor:wait}
+.dm-page form[hidden]{display:none!important}
+.dm-page .dm-entry-form{max-width:550px}.dm-page .dm-entry-form textarea{resize:vertical}
+.dm-home-summary{padding:4px 0 10px;border-bottom:1px dotted #416c4c;font-size:12px;color:#b8cbb6}
+.dm-home-summary b{color:#b4f9bb}
+.dm-columns{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(175px,.8fr);column-gap:33px;margin-top:7px}
+.dm-main-column{min-width:0}.dm-aside{padding-top:24px;min-width:0}
+.dm-aside h2{color:#80cde0!important;font-size:17px!important}
+.dm-side-note{font:12px 'Times New Roman',Times,serif!important;color:#9fae9b!important;margin-top:20px!important}
+.dm-actionline{font:12px 'Times New Roman',Times,serif;color:#a6b8a0!important;margin:8px 0 15px!important}
+.dm-table{border-collapse:collapse;width:100%;color:#c5d1bf;font:13px 'Times New Roman',Times,serif;table-layout:auto}
+.dm-table th{background:transparent!important;color:#94d29f;padding:4px 6px 5px 0;text-align:left;border-bottom:1px dotted #3a6347;font:bold 13px 'Times New Roman',Times,serif}
+.dm-table td{background:transparent!important;padding:5px 9px 6px 0;vertical-align:top;overflow-wrap:anywhere;border-bottom:1px dotted #29392f}
+.dm-table tr:last-child td{border-bottom:0}
+.dm-table small{margin-top:2px;font:11px 'Times New Roman',Times,serif;color:#91a997}
+.dm-table .dm-link{font-weight:normal}
+.dm-simple-list{margin:6px 0 11px;padding-left:19px}.dm-simple-list li{margin:6px 0}.dm-simple-list li::marker{color:#779d79}
+.dm-breadcrumb{color:#a3b8a3;font-size:12px;margin-bottom:12px}
+.dm-post{padding:7px 0 13px;margin:13px 0;border:0;border-bottom:1px dotted #45654c;background:transparent}
+.dm-post-head{font:bold 13px 'Times New Roman',Times,serif;color:#9de2ba;background:none;border:0;padding:0;margin:0 0 8px}
+.dm-post-head small{font:12px 'Times New Roman',Times,serif;color:#a0b0a4;display:inline;margin-left:12px}
+.dm-post p{white-space:normal;overflow-wrap:anywhere;line-height:1.55}
+.dm-filter{padding:3px 0 8px}
+.dm-filter form{max-width:360px;margin:12px 0 3px;display:flex;align-items:center;gap:8px}
+.dm-filter form input{flex:1;margin:0}.dm-filter form button{margin:0}
+.dm-member-list{columns:2}
+.dm-error,.dm-form-error{color:#ffc2a2;font:12px Arial,sans-serif;padding:4px 0}
+.dm-admin-inspect{font:11px Arial,sans-serif!important;color:#ffc67a!important;margin-left:5px;text-decoration:underline;background:none;border:none}
+.dm-inspection{display:inline-block;color:#ffd4a1!important;font:11px Arial,sans-serif;padding:3px;margin:2px;border:1px dotted #977449}
+.dm-inspection button{color:#ffd5b1;background:#5a2626;border:1px solid #a5796b}
+@media(max-width:680px){.dm-page{padding:0 8px 12px}.dm-login-layout,.dm-columns{grid-template-columns:1fr;gap:12px}.dm-register-panel,.dm-aside{padding-top:4px}.dm-entry-note span{display:block;float:none}.dm-logo-art{max-height:110px}.dm-nav{gap:4px 9px}.dm-content{padding:10px 4px}.dm-table th,.dm-table td{padding-right:3px}}
+
+/* Administration window controls, and contextual buttons on public websites. */
+.admin-settings-actions[hidden],#admin-appearance-section[hidden],#admin-mdt-section[hidden],#admin-darkmarket-section[hidden]{display:none!important}
+#admin-darkmarket-section{font:12px Arial,sans-serif;color:#111;padding:10px 4px}
+#admin-darkmarket-section p{margin:7px 0 14px}
+#admin-darkmarket-section .admin-mdt-option{display:block;margin:12px 0}
+#admin-darkmarket-section button{padding:5px 9px}
+.webpage:not(.darkmarket-site) .dm-admin-inspect{display:inline-block;font:11px Arial,sans-serif;color:#8a211a;background:#efefef;border:1px outset #aaa;padding:1px 5px;margin:3px}
+.webpage:not(.darkmarket-site) .dm-inspection{display:inline-block;color:#272727!important;background:#fff4d2;border:1px solid #a48d63;padding:4px;font:11px Arial,sans-serif}
+.webpage:not(.darkmarket-site) .dm-inspection button{background:#f5d4d4;border:1px solid #a88;padding:2px 6px;color:#7c2525;cursor:pointer}
+
+/* A plain 1995-style recovery page, matching the existing DarkMarket forms. */
+.dm-recovery{max-width:400px;margin:16px auto 12px}
+.dm-recovery form{max-width:310px}
+.dm-recovery p{margin:10px 0}
